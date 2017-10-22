@@ -1,16 +1,16 @@
 import Foundation
 
 protocol Robot {
-    var location: Location { get }
+    var location: Location { get set }
     var orientation: Direction { get }
 
     mutating func turnLeft()
     mutating func turnRight()
-    mutating func moveForward()
+    func forwardLocation() -> Location
 }
 
 class MartianRobot: Robot {
-    private(set) var location: Location
+    var location: Location
     private(set) var orientation: Direction
 
     init(location: Location, orientation: Direction) {
@@ -26,17 +26,19 @@ class MartianRobot: Robot {
         self.orientation = self.orientation.right()
     }
 
-    func moveForward() {
+    func forwardLocation() -> Location {
+        var newLocation: Location
         switch orientation {
         case .N:
-            self.location.incrementY()
+            newLocation = Location(x: self.location.x, y: self.location.y + 1)
         case .E:
-            self.location.incrementX()
+            newLocation = Location(x: self.location.x + 1, y: self.location.y)
         case .S:
-            self.location.decrementY()
+            newLocation = Location(x: self.location.x, y: self.location.y - 1)
         case .W:
-            self.location.decrementX()
+            newLocation = Location(x: self.location.x - 1, y: self.location.y)
         }
+        return newLocation
     }
 }
 

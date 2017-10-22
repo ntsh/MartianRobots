@@ -22,9 +22,9 @@ class RobotTests: XCTestCase {
     }
 
     func testMoveForward() {
-        robot?.moveForward()
+        let newLocation = robot?.forwardLocation()
         let expectedLocation = Location(x: 2, y: 5)
-        XCTAssertTrue(robot?.location.x == expectedLocation.x
-            && robot?.location.y == expectedLocation.y)
+        XCTAssertTrue(newLocation?.x == expectedLocation.x
+            && newLocation?.y == expectedLocation.y)
     }
 }

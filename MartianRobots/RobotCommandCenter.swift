@@ -14,20 +14,33 @@ struct RobotCommandCenter {
         var lostLocation: Location?
 
         for instruction in instructions {
-            let location = robot.location
+            let currLocation = robot.location
             switch instruction {
             case .L:
                 robot.turnLeft()
             case .R:
                 robot.turnRight()
             case .F:
-                robot.moveForward()
+                let newLocation = robot.forwardLocation()
+                if !isLost && !surface.contains(location: newLocation) {
+
+                    // Robot is going to go out of grid
+                    // Test if currentLocation is scented
+                    // Ignore instruction if scented, otherwise get lost
+                    if scentedLocations.contains(where: { (location) -> Bool in
+                        location.x == currLocation.x && location.y == currLocation.y
+                    }) {
+                        continue
+                    } else {
+                        isLost = true
+                        lostLocation = currLocation
+                        self.robot.location = newLocation
+                    }
+                } else {
+                    self.robot.location = newLocation
+                }
             }
 
-            if !isLost && !surface.contains(location: robot.location) {
-                isLost = true
-                lostLocation = location
-            }
         }
 
         return lostLocation
