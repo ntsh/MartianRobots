@@ -1,26 +1,34 @@
 import Foundation
 
-enum Direction: Int {
-    case North = 0
-    case East
-    case South
-    case West
+enum Direction: String {
+    case N
+    case E
+    case S
+    case W
 
     func left() -> Direction! {
-        var leftValue = self.rawValue - 1
-        leftValue = leftValue.modulo(by: Direction.count())
-        return Direction(rawValue: leftValue)
+        switch self {
+        case .N:
+            return .W
+        case .E:
+            return .N
+        case .S:
+            return .E
+        case .W:
+            return .S
+        }
     }
 
     func right() -> Direction! {
-        var rightValue = self.rawValue + 1
-        rightValue = rightValue.modulo(by: Direction.count())
-        return Direction(rawValue: rightValue)
-    }
-
-    private static func count() -> Int {
-        // TODO: Hardcoded for now. 
-        // Refactor it to return count of directions dynamically
-        return 4
+        switch self {
+        case .N:
+            return .E
+        case .E:
+            return .S
+        case .S:
+            return .W
+        case .W:
+            return .N
+        }
     }
 }

@@ -7,18 +7,18 @@ class RobotTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let location = Location(x: 2, y: 4)
-        let orientation = Direction.North
+        let orientation = Direction.N
         robot = MartianRobot(location: location, orientation: orientation)
     }
 
     func testTurnLeft() {
         robot?.turnLeft()
-        XCTAssertTrue(robot?.orientation == .West)
+        XCTAssertTrue(robot?.orientation == .W)
     }
 
     func testTurnRight() {
         robot?.turnRight()
-        XCTAssertTrue(robot?.orientation == .East)
+        XCTAssertTrue(robot?.orientation == .E)
     }
 
     func testMoveForward() {

@@ -23,13 +23,13 @@ struct MartianRobot: Robot {
 
     mutating func moveForward() {
         switch orientation {
-        case .North:
+        case .N:
             self.location.incrementY()
-        case .East:
+        case .E:
             self.location.incrementX()
-        case .South:
+        case .S:
             self.location.decrementY()
-        case .West:
+        case .W:
             self.location.decrementX()
         }
     }

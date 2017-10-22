@@ -6,14 +6,14 @@ class DirectionTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        direction = .North
+        direction = .N
     }
 
     func testRightDirection() {
-        XCTAssertTrue(direction?.right() == .East)
+        XCTAssertTrue(direction?.right() == .E)
     }
 
     func testLeftDirection() {
-        XCTAssertTrue(direction?.left() == .West)
+        XCTAssertTrue(direction?.left() == .W)
     }
 }

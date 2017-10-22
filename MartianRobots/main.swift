@@ -27,9 +27,9 @@ func parseRobot(_ line: String) -> Robot {
     }
 
     let location = Location(x: Int(position[0])!, y: Int(position[1])!)
-    let orientation = Direction.North
+    let orientation = Direction(rawValue: position[2])
 
-    return MartianRobot(location: location, orientation: orientation)
+    return MartianRobot(location: location, orientation: orientation!)
 }
 
 func parseInstruction(_ line: String) -> [Instruction] {
