@@ -15,7 +15,6 @@
 		CD1DB9C11F9CEF900024D806 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9BF1F9CEF900024D806 /* Robot.swift */; };
 		CD1DB9C31F9CF12E0024D806 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C21F9CF12E0024D806 /* Direction.swift */; };
 		CD1DB9C41F9CF12E0024D806 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C21F9CF12E0024D806 /* Direction.swift */; };
-		CD1DB9C61F9CF3810024D806 /* DirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C51F9CF3810024D806 /* DirectionTests.swift */; };
 		CD1DB9CA1F9CF7230024D806 /* RobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C91F9CF7230024D806 /* RobotTests.swift */; };
 		CD1DB9CC1F9D192E0024D806 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9CB1F9D192E0024D806 /* App.swift */; };
 		CD1DB9CD1F9D192E0024D806 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9CB1F9D192E0024D806 /* App.swift */; };
@@ -59,7 +58,6 @@
 		CD1DB9BD1F9CEB2D0024D806 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		CD1DB9BF1F9CEF900024D806 /* Robot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
 		CD1DB9C21F9CF12E0024D806 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
-		CD1DB9C51F9CF3810024D806 /* DirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTests.swift; sourceTree = "<group>"; };
 		CD1DB9C91F9CF7230024D806 /* RobotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotTests.swift; sourceTree = "<group>"; };
 		CD1DB9CB1F9D192E0024D806 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CD1DB9CE1F9D2FCC0024D806 /* Instruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				CDABAA541F9AADF000F1B779 /* MartianRobotsTests.swift */,
 				CDABAA611F9BF74F00F1B779 /* SurfaceTests.swift */,
 				CD1DB9BD1F9CEB2D0024D806 /* LocationTests.swift */,
-				CD1DB9C51F9CF3810024D806 /* DirectionTests.swift */,
 				CD1DB9C91F9CF7230024D806 /* RobotTests.swift */,
 				CD1DB9D41F9D45230024D806 /* RobotCommandCenterTests.swift */,
 			);
@@ -284,7 +281,6 @@
 				CDABAA5E1F9AB03800F1B779 /* Location.swift in Sources */,
 				CD1DB9CA1F9CF7230024D806 /* RobotTests.swift in Sources */,
 				CD1DB9E11F9D5B6B0024D806 /* DirectionMoveFactory.swift in Sources */,
-				CD1DB9C61F9CF3810024D806 /* DirectionTests.swift in Sources */,
 				CD1DB9DE1F9D57420024D806 /* DirectionMove.swift in Sources */,
 				CD1DB9D31F9D42B80024D806 /* RobotCommandCenter.swift in Sources */,
 				CD1DB9DB1F9D50F30024D806 /* Position.swift in Sources */,

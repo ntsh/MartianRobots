@@ -11,20 +11,15 @@ class RobotTests: XCTestCase {
         robot = MartianRobot(location: location, orientation: orientation)
     }
 
-    func testTurnLeft() {
-        robot?.turnLeft()
+    func testSetOrientation() {
+        robot?.orientation = .W
         XCTAssertTrue(robot?.orientation == .W)
     }
 
-    func testTurnRight() {
-        robot?.turnRight()
-        XCTAssertTrue(robot?.orientation == .E)
-    }
-
-    func testMoveForward() {
-        let newLocation = robot?.forwardLocation()
+    func testSetLocation() {
         let expectedLocation = Location(x: 2, y: 5)
-        XCTAssertTrue(newLocation?.x == expectedLocation.x
-            && newLocation?.y == expectedLocation.y)
+        robot?.location = expectedLocation
+        XCTAssertTrue(robot?.location.x == expectedLocation.x
+            && robot?.location.y == expectedLocation.y)
     }
 }
