@@ -2,7 +2,7 @@ import Foundation
 
 protocol Robot {
     var location: Location { get set }
-    var orientation: Direction { get }
+    var orientation: Direction { get set }
 
     mutating func turnLeft()
     mutating func turnRight()
@@ -11,7 +11,7 @@ protocol Robot {
 
 class MartianRobot: Robot {
     var location: Location
-    private(set) var orientation: Direction
+    var orientation: Direction
 
     init(location: Location, orientation: Direction) {
         self.location = location

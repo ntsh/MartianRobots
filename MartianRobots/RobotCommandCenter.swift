@@ -15,31 +15,30 @@ struct RobotCommandCenter {
 
         for instruction in instructions {
             let currLocation = robot.location
-            switch instruction {
-            case .L:
-                robot.turnLeft()
-            case .R:
-                robot.turnRight()
-            case .F:
-                let newLocation = robot.forwardLocation()
-                if !isLost && !surface.contains(location: newLocation) {
 
-                    // Robot is going to go out of grid
-                    // Test if currentLocation is scented
-                    // Ignore instruction if scented, otherwise get lost
-                    if scentedLocations.contains(where: { (location) -> Bool in
-                        location.x == currLocation.x && location.y == currLocation.y
-                    }) {
-                        continue
-                    } else {
-                        isLost = true
-                        lostLocation = currLocation
-                        self.robot.location = newLocation
-                    }
+            let command = RobotCommandFactory.getCommand(instruction: instruction)
+            let newPosition = command(self.robot)
+
+            robot.orientation = newPosition.orientation
+
+            if !isLost && !surface.contains(location: newPosition.location) {
+
+                // Robot is going to go out of grid
+                // Test if currentLocation is scented
+                // Ignore instruction if scented, otherwise get lost
+                if scentedLocations.contains(where: { (location) -> Bool in
+                    location.x == currLocation.x && location.y == currLocation.y
+                }) {
+                    continue
                 } else {
-                    self.robot.location = newLocation
+                    isLost = true
+                    lostLocation = currLocation
+                    self.robot.location = newPosition.location
                 }
+            } else {
+                self.robot.location = newPosition.location
             }
+
 
         }
 
