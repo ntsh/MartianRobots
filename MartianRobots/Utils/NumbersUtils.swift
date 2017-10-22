@@ -10,4 +10,12 @@ extension Int {
     func isBetween(start: Int, end: Int) -> Bool {
         return (self >= start) == (self <= end)
     }
+
+    func modulo(by: Int) -> Int {
+        let remainder = self % by
+        if remainder < 0 {
+            return remainder + by
+        }
+        return remainder
+    }
 }

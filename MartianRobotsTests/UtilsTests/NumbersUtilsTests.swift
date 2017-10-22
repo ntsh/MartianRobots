@@ -7,6 +7,7 @@ class NumbersUtilsTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
+    //MARK: Tests for method inBetween()
     func testInBetween() {
         let num = 5
         XCTAssertTrue(num.isBetween(start: 2, end: 6))
@@ -30,5 +31,16 @@ class NumbersUtilsTests: XCTestCase {
     func testIsNotInBetweenNegativeNumbers() {
         let num = -4
         XCTAssertFalse(num.isBetween(start: -2, end: -3))
+    }
+
+    //MARK: Tests for method modulo()
+    func testModulo() {
+        let num = 5
+        XCTAssertTrue(num.modulo(by: 3) == 2)
+    }
+
+    func testModuloNegative() {
+        let num = -1
+        XCTAssertTrue(num.modulo(by: 4) == 3)
     }
 }

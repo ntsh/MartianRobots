@@ -11,6 +11,12 @@
 		CD1DB9BB1F9CE81F0024D806 /* NumbersUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9BA1F9CE81F0024D806 /* NumbersUtilsTests.swift */; };
 		CD1DB9BC1F9CE8320024D806 /* NumbersUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9B71F9CE6C20024D806 /* NumbersUtils.swift */; };
 		CD1DB9BE1F9CEB2D0024D806 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9BD1F9CEB2D0024D806 /* LocationTests.swift */; };
+		CD1DB9C01F9CEF900024D806 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9BF1F9CEF900024D806 /* Robot.swift */; };
+		CD1DB9C11F9CEF900024D806 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9BF1F9CEF900024D806 /* Robot.swift */; };
+		CD1DB9C31F9CF12E0024D806 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C21F9CF12E0024D806 /* Direction.swift */; };
+		CD1DB9C41F9CF12E0024D806 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C21F9CF12E0024D806 /* Direction.swift */; };
+		CD1DB9C61F9CF3810024D806 /* DirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C51F9CF3810024D806 /* DirectionTests.swift */; };
+		CD1DB9CA1F9CF7230024D806 /* RobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9C91F9CF7230024D806 /* RobotTests.swift */; };
 		CDABAA481F9AAD0800F1B779 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA471F9AAD0800F1B779 /* main.swift */; };
 		CDABAA551F9AADF000F1B779 /* MartianRobotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA541F9AADF000F1B779 /* MartianRobotsTests.swift */; };
 		CDABAA5B1F9AAE9900F1B779 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA5A1F9AAE9900F1B779 /* Location.swift */; };
@@ -36,6 +42,10 @@
 		CD1DB9B71F9CE6C20024D806 /* NumbersUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumbersUtils.swift; path = Utils/NumbersUtils.swift; sourceTree = "<group>"; };
 		CD1DB9BA1F9CE81F0024D806 /* NumbersUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumbersUtilsTests.swift; path = UtilsTests/NumbersUtilsTests.swift; sourceTree = "<group>"; };
 		CD1DB9BD1F9CEB2D0024D806 /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		CD1DB9BF1F9CEF900024D806 /* Robot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		CD1DB9C21F9CF12E0024D806 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		CD1DB9C51F9CF3810024D806 /* DirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionTests.swift; sourceTree = "<group>"; };
+		CD1DB9C91F9CF7230024D806 /* RobotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotTests.swift; sourceTree = "<group>"; };
 		CDABAA441F9AAD0800F1B779 /* MartianRobots */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MartianRobots; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDABAA471F9AAD0800F1B779 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CDABAA521F9AADF000F1B779 /* MartianRobotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianRobotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +115,8 @@
 				CDABAA471F9AAD0800F1B779 /* main.swift */,
 				CDABAA5A1F9AAE9900F1B779 /* Location.swift */,
 				CDABAA5F1F9BF6EE00F1B779 /* Surface.swift */,
+				CD1DB9BF1F9CEF900024D806 /* Robot.swift */,
+				CD1DB9C21F9CF12E0024D806 /* Direction.swift */,
 			);
 			path = MartianRobots;
 			sourceTree = "<group>";
@@ -117,6 +129,8 @@
 				CDABAA541F9AADF000F1B779 /* MartianRobotsTests.swift */,
 				CDABAA611F9BF74F00F1B779 /* SurfaceTests.swift */,
 				CD1DB9BD1F9CEB2D0024D806 /* LocationTests.swift */,
+				CD1DB9C51F9CF3810024D806 /* DirectionTests.swift */,
+				CD1DB9C91F9CF7230024D806 /* RobotTests.swift */,
 			);
 			path = MartianRobotsTests;
 			sourceTree = "<group>";
@@ -213,10 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1DB9C01F9CEF900024D806 /* Robot.swift in Sources */,
 				CDABAA5B1F9AAE9900F1B779 /* Location.swift in Sources */,
 				CDABAA481F9AAD0800F1B779 /* main.swift in Sources */,
 				CD1DB9B81F9CE6C20024D806 /* NumbersUtils.swift in Sources */,
 				CDABAA601F9BF6EE00F1B779 /* Surface.swift in Sources */,
+				CD1DB9C31F9CF12E0024D806 /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,10 +243,14 @@
 				CD1DB9BC1F9CE8320024D806 /* NumbersUtils.swift in Sources */,
 				CDABAA631F9BF7AF00F1B779 /* Surface.swift in Sources */,
 				CDABAA5E1F9AB03800F1B779 /* Location.swift in Sources */,
+				CD1DB9CA1F9CF7230024D806 /* RobotTests.swift in Sources */,
+				CD1DB9C61F9CF3810024D806 /* DirectionTests.swift in Sources */,
 				CDABAA621F9BF74F00F1B779 /* SurfaceTests.swift in Sources */,
+				CD1DB9C11F9CEF900024D806 /* Robot.swift in Sources */,
 				CD1DB9BE1F9CEB2D0024D806 /* LocationTests.swift in Sources */,
 				CD1DB9BB1F9CE81F0024D806 /* NumbersUtilsTests.swift in Sources */,
 				CDABAA551F9AADF000F1B779 /* MartianRobotsTests.swift in Sources */,
+				CD1DB9C41F9CF12E0024D806 /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
