@@ -34,3 +34,8 @@ struct MartianRobot: Robot {
         }
     }
 }
+
+struct RobotSequence {
+    var robot: Robot
+    var instructions: [Instruction]
+}
