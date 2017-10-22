@@ -6,16 +6,19 @@ class RobotCommandFactory {
     static func getCommand(instruction: Instruction) -> ((Robot) -> Position) {
 
         func turnRight(robot: Robot) -> Position {
-            return Position(location: robot.location, orientation: robot.orientation.right())
+            let directionMove: DirectionMove = robot.orientation.getDirectionMove()
+            return Position(location: robot.location, orientation: directionMove.getRight())
         }
 
         func turnLeft(robot: Robot) -> Position {
-            return Position(location: robot.location, orientation: robot.orientation.left())
+            let directionMove: DirectionMove = robot.orientation.getDirectionMove()
+            return Position(location: robot.location, orientation: directionMove.getLeft())
 
         }
 
         func moveForward(robot: Robot) -> Position {
-            return Position(location: robot.forwardLocation(), orientation: robot.orientation)
+            let directionMove: DirectionMove = robot.orientation.getDirectionMove()
+            return Position(location: directionMove.getForwardLocation(location: robot.location), orientation: robot.orientation)
         }
 
         switch instruction {

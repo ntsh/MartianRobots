@@ -28,6 +28,10 @@
 		CD1DB9D81F9D50CA0024D806 /* RobotCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9D61F9D50CA0024D806 /* RobotCommandFactory.swift */; };
 		CD1DB9DA1F9D50F30024D806 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9D91F9D50F30024D806 /* Position.swift */; };
 		CD1DB9DB1F9D50F30024D806 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9D91F9D50F30024D806 /* Position.swift */; };
+		CD1DB9DD1F9D57420024D806 /* DirectionMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9DC1F9D57420024D806 /* DirectionMove.swift */; };
+		CD1DB9DE1F9D57420024D806 /* DirectionMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9DC1F9D57420024D806 /* DirectionMove.swift */; };
+		CD1DB9E01F9D5B6B0024D806 /* DirectionMoveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9DF1F9D5B6B0024D806 /* DirectionMoveFactory.swift */; };
+		CD1DB9E11F9D5B6B0024D806 /* DirectionMoveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1DB9DF1F9D5B6B0024D806 /* DirectionMoveFactory.swift */; };
 		CDABAA481F9AAD0800F1B779 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA471F9AAD0800F1B779 /* main.swift */; };
 		CDABAA551F9AADF000F1B779 /* MartianRobotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA541F9AADF000F1B779 /* MartianRobotsTests.swift */; };
 		CDABAA5B1F9AAE9900F1B779 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA5A1F9AAE9900F1B779 /* Location.swift */; };
@@ -63,6 +67,8 @@
 		CD1DB9D41F9D45230024D806 /* RobotCommandCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotCommandCenterTests.swift; sourceTree = "<group>"; };
 		CD1DB9D61F9D50CA0024D806 /* RobotCommandFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotCommandFactory.swift; sourceTree = "<group>"; };
 		CD1DB9D91F9D50F30024D806 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		CD1DB9DC1F9D57420024D806 /* DirectionMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionMove.swift; sourceTree = "<group>"; };
+		CD1DB9DF1F9D5B6B0024D806 /* DirectionMoveFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionMoveFactory.swift; sourceTree = "<group>"; };
 		CDABAA441F9AAD0800F1B779 /* MartianRobots */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MartianRobots; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDABAA471F9AAD0800F1B779 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CDABAA521F9AADF000F1B779 /* MartianRobotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianRobotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +145,8 @@
 				CD1DB9D11F9D42B80024D806 /* RobotCommandCenter.swift */,
 				CD1DB9D61F9D50CA0024D806 /* RobotCommandFactory.swift */,
 				CD1DB9D91F9D50F30024D806 /* Position.swift */,
+				CD1DB9DC1F9D57420024D806 /* DirectionMove.swift */,
+				CD1DB9DF1F9D5B6B0024D806 /* DirectionMoveFactory.swift */,
 			);
 			path = MartianRobots;
 			sourceTree = "<group>";
@@ -256,6 +264,8 @@
 				CDABAA5B1F9AAE9900F1B779 /* Location.swift in Sources */,
 				CDABAA481F9AAD0800F1B779 /* main.swift in Sources */,
 				CD1DB9B81F9CE6C20024D806 /* NumbersUtils.swift in Sources */,
+				CD1DB9E01F9D5B6B0024D806 /* DirectionMoveFactory.swift in Sources */,
+				CD1DB9DD1F9D57420024D806 /* DirectionMove.swift in Sources */,
 				CDABAA601F9BF6EE00F1B779 /* Surface.swift in Sources */,
 				CD1DB9CC1F9D192E0024D806 /* App.swift in Sources */,
 				CD1DB9D71F9D50CA0024D806 /* RobotCommandFactory.swift in Sources */,
@@ -273,7 +283,9 @@
 				CDABAA631F9BF7AF00F1B779 /* Surface.swift in Sources */,
 				CDABAA5E1F9AB03800F1B779 /* Location.swift in Sources */,
 				CD1DB9CA1F9CF7230024D806 /* RobotTests.swift in Sources */,
+				CD1DB9E11F9D5B6B0024D806 /* DirectionMoveFactory.swift in Sources */,
 				CD1DB9C61F9CF3810024D806 /* DirectionTests.swift in Sources */,
+				CD1DB9DE1F9D57420024D806 /* DirectionMove.swift in Sources */,
 				CD1DB9D31F9D42B80024D806 /* RobotCommandCenter.swift in Sources */,
 				CD1DB9DB1F9D50F30024D806 /* Position.swift in Sources */,
 				CDABAA621F9BF74F00F1B779 /* SurfaceTests.swift in Sources */,
