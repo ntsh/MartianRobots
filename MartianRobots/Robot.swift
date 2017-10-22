@@ -9,19 +9,24 @@ protocol Robot {
     mutating func moveForward()
 }
 
-struct MartianRobot: Robot {
+class MartianRobot: Robot {
     private(set) var location: Location
     private(set) var orientation: Direction
 
-    mutating func turnLeft() {
+    init(location: Location, orientation: Direction) {
+        self.location = location
+        self.orientation = orientation
+    }
+
+    func turnLeft() {
         self.orientation = self.orientation.left()
     }
 
-    mutating func turnRight() {
+    func turnRight() {
         self.orientation = self.orientation.right()
     }
 
-    mutating func moveForward() {
+    func moveForward() {
         switch orientation {
         case .N:
             self.location.incrementY()
@@ -34,6 +39,7 @@ struct MartianRobot: Robot {
         }
     }
 }
+
 
 struct RobotSequence {
     var robot: Robot

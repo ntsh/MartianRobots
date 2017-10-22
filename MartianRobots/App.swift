@@ -8,34 +8,20 @@ struct App {
         var scentLocations = [Location]()
 
         for robotSequence in sequence {
-            var robot = robotSequence.robot
+            let robot = robotSequence.robot
             let instructions = robotSequence.instructions
-            var isLost = false
 
-            for instruction in instructions {
-                let location = robot.location
+            var commandCenter = RobotCommandCenter(robot: robot)
+            let lostLocation = commandCenter.execute(instructions: instructions, surface: surface, scentedLocations: scentLocations)
 
-                switch instruction {
-                case .L:
-                    robot.turnLeft()
-                case .R:
-                    robot.turnRight()
-                case .F:
-                    robot.moveForward()
-                }
+            var lostString = ""
+            if lostLocation != nil {
+                scentLocations.append(lostLocation!)
+                lostString = "LOST"
 
-                if !surface.contains(location: robot.location) {
-                    isLost = true
-                    scentLocations.append(location)
-                }
             }
+            print ("\(robot.location.x) \(robot.location.y) \(robot.orientation) \(lostString)")
 
-            print ("\(robot.location.x) \(robot.location.y) \(robot.orientation)", terminator:"")
-            if isLost {
-                print(" LOST")
-            } else {
-                print("")
-            }
         }
     }
 }
