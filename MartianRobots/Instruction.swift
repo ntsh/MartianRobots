@@ -1,5 +1,5 @@
 import Foundation
 
 enum Instruction: String {
-    case L, R, F
+    case L, R, F, U
 }

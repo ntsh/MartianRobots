@@ -33,4 +33,16 @@ class RobotCommandCenterTests: XCTestCase {
         XCTAssert(robot.location.y == 3)
         XCTAssert(robot.orientation == .S)
     }
+
+    func testRobotInstructionWithScentWithUTurn() {
+        let robot = MartianRobot(location: Location(x: 0, y: 3), orientation: .W)
+        let instructions: [Instruction] = [.U,.F,.F,.F,.L,.F,.L,.F,.L]
+        var commandCenter = RobotCommandCenter(robot: robot)
+        let scentedLocations: [Location] = [Location(x:3, y:3)]
+        let lostLocation = commandCenter.execute(instructions: instructions, surface: surface!, scentedLocations: scentedLocations)
+        XCTAssert(lostLocation == nil)
+        XCTAssert(robot.location.x == 2)
+        XCTAssert(robot.location.y == 3)
+        XCTAssert(robot.orientation == .S)
+    }
 }

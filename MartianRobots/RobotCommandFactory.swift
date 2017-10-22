@@ -21,6 +21,13 @@ class RobotCommandFactory {
             return Position(location: directionMove.getForwardLocation(location: robot.location), orientation: robot.orientation)
         }
 
+        func makeUTurn(robot: Robot) -> Position {
+            var directionMove: DirectionMove = robot.orientation.getDirectionMove()
+            var orientation = directionMove.getRight()
+            directionMove = orientation.getDirectionMove()
+            return Position(location: robot.location, orientation: directionMove.getRight())
+        }
+
         switch instruction {
         case .R:
             return turnRight
@@ -28,6 +35,8 @@ class RobotCommandFactory {
             return turnLeft
         case .F:
             return moveForward
+        case .U:
+            return makeUTurn
         }
     }
 }
