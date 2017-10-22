@@ -15,9 +15,6 @@ class MartianRobotsTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        var location = Location(x: 3, y: 10)
-        location.incrementX()
-        XCTAssertTrue(location.x == 4)
 
     }
     

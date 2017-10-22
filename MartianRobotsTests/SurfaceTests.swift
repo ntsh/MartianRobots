@@ -1,15 +1,15 @@
 import XCTest
 
-class GridTests: XCTestCase {
+class SurfaceTests: XCTestCase {
 
-    var grid: Grid?
+    var grid: Surface?
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let start = Location(x: 0, y: 0)
         let limit = Location(x: 5, y: 9)
-        self.grid = Grid(start: start, limit: limit)
+        self.grid = Surface(origin: start, bounds: limit)
     }
     
     override func tearDown() {
@@ -28,7 +28,7 @@ class GridTests: XCTestCase {
     }
 
     func testNegativeGrid() {
-        let gridNegative = Grid(start: Location(x:0, y:0), limit: Location(x: -2, y: -3))
+        let gridNegative = Surface(origin: Location(x:0, y:0), bounds: Location(x: -2, y: -3))
         let location = Location(x: -1, y: -1)
         XCTAssertTrue(gridNegative.contains(location: location))
     }
