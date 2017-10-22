@@ -18,10 +18,8 @@ struct App {
             if lostLocation != nil {
                 scentLocations.append(lostLocation!)
                 lostString = "LOST"
-
             }
             print ("\(robot.location.x) \(robot.location.y) \(robot.orientation) \(lostString)")
-
         }
     }
 }

@@ -1,7 +1,5 @@
 import Foundation
 
-print("Hello, World!")
-
 func parseGrid() -> Surface {
     var bounds = readLine()?.components(separatedBy: " ").flatMap { Int($0) }
 

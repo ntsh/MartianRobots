@@ -38,6 +38,7 @@
 		CDABAA601F9BF6EE00F1B779 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA5F1F9BF6EE00F1B779 /* Surface.swift */; };
 		CDABAA621F9BF74F00F1B779 /* SurfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA611F9BF74F00F1B779 /* SurfaceTests.swift */; };
 		CDABAA631F9BF7AF00F1B779 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDABAA5F1F9BF6EE00F1B779 /* Surface.swift */; };
+		CDD8F7821F9D650200CE3733 /* input.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDD8F7811F9D650200CE3733 /* input.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,7 @@
 		CDABAA5A1F9AAE9900F1B779 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CDABAA5F1F9BF6EE00F1B779 /* Surface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Surface.swift; sourceTree = "<group>"; };
 		CDABAA611F9BF74F00F1B779 /* SurfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurfaceTests.swift; sourceTree = "<group>"; };
+		CDD8F7811F9D650200CE3733 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		CDABAA531F9AADF000F1B779 /* MartianRobotsTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8F7811F9D650200CE3733 /* input.txt */,
 				CDABAA561F9AADF000F1B779 /* Info.plist */,
 				CD1DB9B91F9CE7F00024D806 /* UtilsTests */,
 				CDABAA541F9AADF000F1B779 /* MartianRobotsTests.swift */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD8F7821F9D650200CE3733 /* input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
